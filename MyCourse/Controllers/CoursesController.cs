@@ -11,7 +11,8 @@ namespace MyCourse.Controllers
         
         public  IActionResult Detail(string id)
         {
-            return Content($"sono detail ho ricevuto {id}");
+            //return Content($"sono detail ho ricevuto {id}");
+            return View();
         }
     }
 }
