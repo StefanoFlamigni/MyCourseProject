@@ -1,2 +1,37 @@
 
-  <h1> sono la view per l'action Detail di CoursesController </h1> 
+@model CourseDetailViewModel
+
+<section class="course-info">
+  <div class="row">
+    <div class="col-md-9">
+      <h1>@Model.Description</h1> 
+    </div>
+    <div class="col-md-3 d-flex align-itmes-end">
+        <a href="#" class="btn btn-warning btn-lg">Iscriviti</a>
+    </div>
+  </div>
+</section>
+<section class="course-detail">
+
+  @foreach(LessonViewModel lezione in Model.Lessons){
+
+  <div class="row">
+    <div class="col-md-9">
+       <p> @lezione.Title</p>
+    </div>
+    <div class="col-md-3">
+      <P> @lezione.Duration </P> 
+    </div>
+  </div>
+  }
+
+  <div class="row">
+    <div class="col-md-9">
+       <p> Totale</p>
+    </div>
+    <div class="col-md-3">
+      <P> @Model.TotalCourseDuration </P> 
+    </div>
+  </div>
+
+</section>
